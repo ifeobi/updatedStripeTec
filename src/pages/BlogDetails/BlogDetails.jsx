@@ -29,6 +29,7 @@ const BlogDetails = () => {
         <meta property="og:type" content='article' />
         <meta property="og:title" content={data?.attributes?.blogTitle} />
         <meta property="og:description" content={data?.attributes?.blogTitle} />
+        <meta property="og:image" content={`${data.attributes.coverImg.data.attributes.url}`} />
         {/* End Facebook tags */}
 
         {/* Twitter tags */}
@@ -37,6 +38,7 @@ const BlogDetails = () => {
         <meta name="twitter:card" content='article' />
         <meta name="twitter:title" content={data?.attributes?.blogTitle} />
         <meta name="twitter:description" content={data?.attributes?.blogTitle} />
+        <meta name="twitter:image" content={`${data.attributes.coverImg.data.attributes.url}`} />
         {/* End Twitter tags */}
 
       </Helmet>

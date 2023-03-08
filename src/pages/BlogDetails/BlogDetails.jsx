@@ -25,12 +25,14 @@ const BlogDetails = () => {
         <meta name="description" content={data?.attributes?.blogTitle} />
 
         {/* Facebook tags */}
+        <meta property="og:url" content={window.location.href} />
         <meta property="og:type" content='article' />
         <meta property="og:title" content={data?.attributes?.blogTitle} />
         <meta property="og:description" content={data?.attributes?.blogTitle} />
         {/* End Facebook tags */}
 
         {/* Twitter tags */}
+        <meta name="twitter:url" content={window.location.href} />
         <meta name="twitter:creator" content={data?.attributes?.author} />
         <meta name="twitter:card" content='article' />
         <meta name="twitter:title" content={data?.attributes?.blogTitle} />

@@ -258,7 +258,7 @@ const Business = () => {
       <footer className="bottom">
         <div class="container">
           <div class="copyright">
-            © Copyright Stripe-tec. All rights reserved 2023{" "}
+            © Copyright Stripe-tec. All rights reserved {new Date().getFullYear()}{" "}
           </div>
         </div>
       </footer>

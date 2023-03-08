@@ -3,6 +3,8 @@ import "./BlogDetails.scss";
 import { Link, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import ReactMarkdown from "react-markdown";
+import Socials from "../../components/Socials/Socials";
+
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -41,10 +43,10 @@ const BlogDetails = () => {
         </section>
 
         {/* Share */}
-        {/* <footer className="footerf">
+        <footer className="footerf">
           <div className="social-links2"><Socials /></div>
           <span>Share this article</span>
-        </footer> */}
+        </footer>
       </article>
     </div>
   );

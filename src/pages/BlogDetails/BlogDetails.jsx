@@ -4,7 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import ReactMarkdown from "react-markdown";
 import Socials from "../../components/Socials/Socials";
-
+import { Helmet } from "react-helmet-async";
+import J from "../Home/J.png";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -18,6 +19,11 @@ const BlogDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <link rel="icon" href={J} />
+        <title>{data?.attributes?.blogTitle}</title>
+        <meta name="description" content={data?.attributes?.blogTitle} />
+      </Helmet>
       <article className="article">
         <section className="post-header">
           <div className="header-content post-container">
@@ -44,7 +50,9 @@ const BlogDetails = () => {
 
         {/* Share */}
         <footer className="footerf">
-          <div className="social-links2"><Socials /></div>
+          <div className="social-links2">
+            <Socials />
+          </div>
           <span>Share this article</span>
         </footer>
       </article>

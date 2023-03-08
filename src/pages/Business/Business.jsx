@@ -3,6 +3,7 @@ import "./Business.scss";
 import Form from "../../components/Form/Form";
 import Whatsapp from "../../components/Whatsapp/Whatsapp";
 import { Link, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Business = () => {
   let location = useLocation({
@@ -23,6 +24,13 @@ const Business = () => {
 
   return (
     <div className="banner">
+      <Helmet>
+        <title>What We Do For Businesses</title>
+        <meta
+          name="description"
+          content="Want to take your business to the next level? Our digital agency can help you attract more customers and boost your online presence. Trust us to create a customized strategy for your brand and deliver real results."
+        />
+      </Helmet>
       <Whatsapp />
       <div className="container1">
         <div className="innerPage">
@@ -31,7 +39,8 @@ const Business = () => {
             At Stripe-tec, we aim to get our clients at least {""}
             <span style={{ color: "rgba(108, 5, 5, 0.974)" }}>
               <b>1 new lead every day</b>
-            </span> {""}
+            </span>{" "}
+            {""}
             by using effective marketing methods such as social media ads,
             Google ads, &amp; email marketing. We also offer{" "}
             <span style={{ color: "rgba(108, 5, 5, 0.974)" }}>
@@ -258,7 +267,8 @@ const Business = () => {
       <footer className="bottom">
         <div class="container">
           <div class="copyright">
-            © Copyright Stripe-tec. All rights reserved {new Date().getFullYear()}{" "}
+            © Copyright Stripe-tec. All rights reserved{" "}
+            {new Date().getFullYear()}{" "}
           </div>
         </div>
       </footer>

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
 import Form from "../../components/Form/Form";
 import Whatsapp from "../../components/Whatsapp/Whatsapp";
@@ -22,6 +23,13 @@ const Firms = () => {
   }, [location]);
   return (
     <div className="banner-firm">
+      <Helmet>
+        <title>What We Do For Professionals</title>
+        <meta
+          name="description"
+          content="Want to take your practice to the next level? Our digital agency can help you attract more clients and boost your online presence. Trust us to create a customized strategy for your brand and deliver real results."
+        />
+      </Helmet>
       <Whatsapp />
       <div className="banner-container">
         <div className="innerPage">
@@ -257,7 +265,8 @@ const Firms = () => {
       <footer className="bottom">
         <div class="container">
           <div class="copyright">
-            © Copyright Stripe-tec All rights reserved {new Date().getFullYear()}{" "}
+            © Copyright Stripe-tec All rights reserved{" "}
+            {new Date().getFullYear()}{" "}
           </div>
         </div>
       </footer>

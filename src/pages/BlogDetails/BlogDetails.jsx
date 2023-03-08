@@ -23,6 +23,20 @@ const BlogDetails = () => {
         <link rel="icon" href={J} />
         <title>{data?.attributes?.blogTitle}</title>
         <meta name="description" content={data?.attributes?.blogTitle} />
+
+        {/* Facebook tags */}
+        <meta property="og:type" content='article' />
+        <meta property="og:title" content={data?.attributes?.blogTitle} />
+        <meta property="og:description" content={data?.attributes?.blogTitle} />
+        {/* End Facebook tags */}
+
+        {/* Twitter tags */}
+        <meta name="twitter:creator" content={data?.attributes?.author} />
+        <meta name="twitter:card" content='article' />
+        <meta name="twitter:title" content={data?.attributes?.blogTitle} />
+        <meta name="twitter:description" content={data?.attributes?.blogTitle} />
+        {/* End Twitter tags */}
+
       </Helmet>
       <article className="article">
         <section className="post-header">

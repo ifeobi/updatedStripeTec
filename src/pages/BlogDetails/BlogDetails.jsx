@@ -13,7 +13,6 @@ const BlogDetails = () => {
     `${process.env.React_App_REACT_APP_URL_API}/+${id}?populate=*`
   );
 
-  // console.log(data);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :( </p>;
 
@@ -26,21 +25,29 @@ const BlogDetails = () => {
 
         {/* Facebook tags */}
         <meta property="og:url" content={window.location.href} />
-        <meta property="og:type" content='article' />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={data?.attributes?.blogTitle} />
         <meta property="og:description" content={data?.attributes?.blogTitle} />
-        <meta property="og:image" content={`${data.attributes.coverImg.data.attributes.url}`} />
+        <meta
+          property="og:image"
+          content={`${data.attributes.coverImg.data.attributes.url}`}
+        />
         {/* End Facebook tags */}
 
         {/* Twitter tags */}
         <meta name="twitter:url" content={window.location.href} />
         <meta name="twitter:creator" content={data?.attributes?.author} />
-        <meta name="twitter:card" content='article' />
+        <meta name="twitter:card" content="article" />
         <meta name="twitter:title" content={data?.attributes?.blogTitle} />
-        <meta name="twitter:description" content={data?.attributes?.blogTitle} />
-        <meta name="twitter:image" content={`${data.attributes.coverImg.data.attributes.url}`} />
+        <meta
+          name="twitter:description"
+          content={data?.attributes?.blogTitle}
+        />
+        <meta
+          name="twitter:image"
+          content={`${data.attributes.coverImg.data.attributes.url}`}
+        />
         {/* End Twitter tags */}
-
       </Helmet>
       <article className="article">
         <section className="post-header">

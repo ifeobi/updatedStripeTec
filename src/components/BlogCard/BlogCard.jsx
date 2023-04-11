@@ -3,8 +3,7 @@ import "./BlogCard.scss";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ blogs }) => {
-  // console.log(blogs);
-
+  
   return (
     <div className="body">
       <section className="cards">
